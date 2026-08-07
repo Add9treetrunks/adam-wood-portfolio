@@ -6,13 +6,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header section with name and tagline -->
     <header class="hero">
         <h1>Adam Wood</h1>
         <p>Computer Science & Economics Student | Python & SQL Enthusiast</p>
+        <!-- Dark mode toggle button -->
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
     </header>
-
-    <nav>
-    <!--     Navigation links go here -->
+    
+    <!-- Mobile menu button -->
+    <button id="menu-toggle">☰ Menu</button>
+    <!-- Navigation bar -->
+    <nav id="main-nav">
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
@@ -23,7 +28,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    <!-- Main content area -->
     <main>
         <section id="about">
             <h2>About Me</h2>
@@ -100,7 +105,7 @@
         </section>
 
         <section id="projects">
-            <!-- Finance Tracker + Inventory System -->
+            <!--Finance Tracker + Inventory System-->
             <h2>Projects</h2>
 
             <article class="project-card">
@@ -181,7 +186,7 @@
         </section>
 
         <section id="achievements" >
-            <!--show my achievements-->
+            <!--Shows my achievements-->
             <h2>Achievements</h2>
 
             <ul class="achievement-list">
@@ -193,7 +198,7 @@
         </section>
 
         <section id="contact">
-            <!-- Contact info -->
+            <!--Contact info-->
             <h2>Contact</h2>
             <div class="contact-list">
                 <p>Email: <a href="mailto:adamvwood@gmail.com">adamvwood@gmail.com</a></p>
@@ -207,8 +212,10 @@
     </main>
 
     <footer>
-        <!-- Footer content -->
         <p>&copy; 2026 Adam Wood. All rights reserved.</p>
     </footer>
+
+    <!-- External JavaScript file for dark mode + mobile menu -->
+    <script src="index.js"></script>
 </body>
 </html>
