@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (menuBtn && nav) {
         menuBtn.addEventListener("click", () => {
             nav.classList.toggle("active");
+            // Change button text depending on state
+            if (nav.classList.contains("active")) {
+                menuBtn.textContent = "✖ Close";
+            } else {
+                menuBtn.textContent = "☰ Menu";
+            }
         });
 
         // Smooth scrolling with menu close
@@ -25,7 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 const target = document.querySelector(this.getAttribute("href"));
 
-                nav.classList.remove("active");
+                // Only close menu if we're in mobile mode
+                if (window.innerWidth < 768) {
+                    nav.classList.remove("active");
+                    menuBtn.textContent = "☰ Menu"; // reset button text
+                }
 
                 setTimeout(() => {
                     target.scrollIntoView({
