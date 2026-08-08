@@ -1,4 +1,7 @@
-/* General Page Styling */
+/* =========================
+   General Page Styling
+   (Base reset + body defaults)
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -12,56 +15,41 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Dark mode styles */
-body.dark-mode #dark-mode-toggle {
-    background-color: #1e1e1e; /* dark background for button */
-    color: #f4f4f4;            /* light text so it's visible */
-    border: 1px solid #444;    /* subtle border in dark mode */
+/* =========================
+   Buttons (Dark Mode + Menu)
+========================= */
+#dark-mode-toggle,
+#menu-toggle {
+    background-color: white;
+    color: #1e3a5f;
+    border: 1px solid #444;
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
 }
-body.dark-mode #dark-mode-toggle:hover {
-    background-color: #253b6a; /* deep navy blue hover background */
-    border-color: #427dd3;     /* bright blue border highlight */
+
+#dark-mode-toggle:hover,
+#menu-toggle:hover {
+    background-color: #ddd;
+    border-color: #999;
 }
-body.dark-mode #menu-toggle {
-    background-color: #1e1e1e; /* dark background for button */
-    color: #f4f4f4;            /* light text so it's visible */
-    border: 1px solid #444;    /* subtle border in dark mode */
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-body.dark-mode #menu-toggle:hover {
-    background-color: #253b6a; /* deep navy blue hover background */
-    border-color: #427dd3;     /* bright blue border highlight */
-}
+
+/* =========================
+   Dark Mode Styles
+========================= */
 body.dark-mode {
     background-color: #121212;
     color: #f4f4f4;
 }
-body.dark-mode header {
-    background-color: #333;
-}
-body.dark-mode nav a {
-    color: #1e3a5f;
-}
+
+body.dark-mode header { background-color: #333; }
+body.dark-mode nav a { color: #285b9c; }
+
 body.dark-mode .education-card,
 body.dark-mode .project-card,
 body.dark-mode .leadership-card {
     background-color: #1e1e1e;
     border-color: #444;
-}
-body.dark-mode #main-nav a{
-    color: #285b9c;
-}
-/* Brighten h3 headings in Education and Projects in dark mode */
-body.dark-mode .education-card h3,
-body.dark-mode .project-card h3,
-body.dark-mode .leadership-card h3,
-body.dark-mode .project-card a{
-    color: #427dd3; /* brighter blue */
 }
 
 body.dark-mode .achievement-list li,
@@ -70,18 +58,31 @@ body.dark-mode .contact-list p {
     color: #f4f4f4;
 }
 
-#dark-mode-toggle{
-    background-color: white; /* dark background for button */
-    color: #1e3a5f;            /* light text so it's visible */
-    border: 1px solid #444;    /* subtle border in dark mode */
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+/* Brighten headings and links in dark mode */
+body.dark-mode .education-card h3,
+body.dark-mode .project-card h3,
+body.dark-mode .leadership-card h3,
+body.dark-mode .project-card a {
+    color: #427dd3; /* brighter blue */
 }
-#dark-mode-toggle:hover {
-    background-color: #ddd;
-    border-color: #999;
+
+/* Dark mode button overrides */
+body.dark-mode #dark-mode-toggle,
+body.dark-mode #menu-toggle {
+    background-color: #1e1e1e;
+    color: #f4f4f4;
+    border-color: #444;
 }
+
+body.dark-mode #dark-mode-toggle:hover,
+body.dark-mode #menu-toggle:hover {
+    background-color: #253b6a; /* deep navy hover */
+    border-color: #427dd3;     /* bright blue border */
+}
+
+/* =========================
+   Navigation
+========================= */
 /* Mobile menu hidden by default */
 #main-nav ul {
     display: none;
@@ -91,63 +92,9 @@ body.dark-mode .contact-list p {
     margin-top: 15px;
     padding: 0;
 }
-#menu-toggle {
-    background-color: white; /* dark background for button */
-    color: #1e3a5f;            /* light text so it's visible */
-    border: 1px solid #444;    /* subtle border in dark mode */
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-#menu-toggle:hover {
-    background-color: #ddd;
-    border-color: #999;
-}
+
 /* Show menu when active (after button click) */
-#main-nav.active ul {
-    display: flex;
-}
-
-/* Desktop view */
-@media (min-width: 768px) {
-    #menu-toggle {
-        display: none; /* hide button on desktop */
-    } /* hide menu button on desktop */
-    #main-nav ul {
-        display: flex; /* always show menu on desktop */
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    } /* always show menu on desktop */
-}
-
-/* Layout basics */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 50px;
-}
-
-h1, h2, h3 {
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-/* Header styling */
-header {
-    background-color: #1e3a5f;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+#main-nav.active ul { display: flex; }
 
 /* Navigation links */
 nav a {
@@ -156,11 +103,53 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover { text-decoration: underline; }
+
+/* Desktop view */
+@media (min-width: 768px) {
+    #menu-toggle { display: none; } /* hide button on desktop */
+    #main-nav ul {
+        display: flex; /* always show menu on desktop */
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
 }
 
-/* Education Cards*/
+/* =========================
+   Layout Basics
+========================= */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section { margin-bottom: 50px; }
+h1, h2, h3 { margin-bottom: 10px; }
+p { margin-bottom: 10px; }
+
+/* =========================
+   Header & Footer Styling
+========================= */
+header {
+    background-color: #1e3a5f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e3a5f;
+    color: white;
+}
+
+/* =========================
+   Education Cards
+========================= */
 .education-card {
     flex: 1 1 300px;
     background-color: white;
@@ -169,14 +158,12 @@ nav a:hover {
     border: 3px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.education-card h3 {
-    color: #1e3a5f;
-}
-.education-card ul {
-    padding-left: 20px;
-}
+.education-card h3 { color: #1e3a5f; }
+.education-card ul { padding-left: 20px; }
 
-/* Skills List */
+/* =========================
+   Skills List
+========================= */
 .skills-list {
     display: flex;
     flex-wrap: wrap;
@@ -192,7 +179,9 @@ nav a:hover {
     font-size: 1rem;
 }
 
-/* Project Cards*/
+/* =========================
+   Project Cards
+========================= */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -207,12 +196,8 @@ nav a:hover {
     border: 3px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.project-card h3 {
-    color: #1e3a5f;
-}
-.project-card ul {
-    padding-left: 20px;
-}
+.project-card h3 { color: #1e3a5f; }
+.project-card ul { padding-left: 20px; }
 .project-card a {
     display: inline-block;
     margin-top: 10px;
@@ -220,11 +205,11 @@ nav a:hover {
     font-weight: bold;
     text-decoration: none;
 }
-.project-card a:hover {
-    text-decoration: underline;
-}
+.project-card a:hover { text-decoration: underline; }
 
-/* Leadership & Experience Cards*/
+/* =========================
+   Leadership & Experience Cards
+========================= */
 .leadership-card {
     flex: 1 1 300px;
     background-color: white;
@@ -233,11 +218,11 @@ nav a:hover {
     border: 3px solid #ddd;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-.leadership-card h3 {
-    color: #1e3a5f;
-}
+.leadership-card h3 { color: #1e3a5f; }
 
-/* Achievements List */
+/* =========================
+   Achievements List
+========================= */
 .achievement-list {
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +238,9 @@ nav a:hover {
     font-size: 1rem;
 }
 
-/* Contact section pills */
+/* =========================
+   Contact Section Pills
+========================= */
 .contact-list {
     display: flex;
     flex-wrap: wrap;
@@ -272,42 +259,18 @@ nav a:hover {
     color: white;
     text-decoration: none;
 }
-.contact-list a:hover {
-    text-decoration: underline;
-}
+.contact-list a:hover { text-decoration: underline; }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1e3a5f;
-    color: white;
-}
-
-/* Responsive adjustments (≤700px) */
+/* =========================
+   Responsive Adjustments (≤700px)
+========================= */
 @media (max-width: 700px) {
-    body {
-        font-size: 16px;
-    }
-    main {
-        padding: 15px;
-    }
-    .skills-list {
-        justify-content: center;
-    }
-    .projects-container {
-        flex-direction: column;
-    }
-    .project-card {
-        width: 100%;
-    }
-    header {
-        padding: 15px;
-    }
-    h1 {
-        font-size: 1.8rem;
-    }
-    h2 {
-        font-size: 1.4rem;
-    }
+    body { font-size: 16px; }
+    main { padding: 15px; }
+    .skills-list { justify-content: center; }
+    .projects-container { flex-direction: column; }
+    .project-card { width: 100%; }
+    header { padding: 15px; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
 }
