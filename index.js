@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (darkToggle) {
         darkToggle.addEventListener("click", () => {
             document.body.classList.toggle("dark-mode");
+            // Change button text depending on state
+            if (document.body.classList.contains("dark-mode")) {
+                darkToggle.textContent = "☀️ Toggle Light Mode";
+            } else {
+                darkToggle.textContent = "🌙 Toggle Dark Mode";
+            }
         });
     }
 
