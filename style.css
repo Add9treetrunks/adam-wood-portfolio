@@ -8,6 +8,10 @@
     box-sizing: border-box; /* ensures padding/border don’t affect element width */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
