@@ -35,13 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (window.innerWidth < 768) {
                     nav.classList.remove("active");
                     menuBtn.textContent = "☰ Menu"; // reset button text
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }, 400);
+                }
+                else{
+                    target.scrollIntoView({behavior: "smooth"});
                 }
 
-                setTimeout(() => {
-                    target.scrollIntoView({
-                        behavior: "smooth"
-                    });
-                }, 400);
+                
             });
         });
 
