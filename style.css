@@ -89,13 +89,33 @@ body.dark-mode #menu-toggle:hover {
 ========================= */
 /* Mobile menu hidden by default */
 #main-nav ul {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     list-style: none;
     margin-top: 15px;
     padding: 0;
 }
+/* Mobile navigation */
+#main-nav {
+    opacity: 0;
+    transform: translateY(-15px);
+    max-height: 0;
+    overflow: hidden;
+    transition:
+            opacity 0.4s ease,
+            transform 0.4s ease,
+            max-height 0.4s ease;
+}
+
+/* Opening */
+#main-nav.active {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+    pointer-events: auto;
+}
+
 
 /* Show menu when active (after button click) */
 #main-nav.active ul { display: flex; }
@@ -113,9 +133,17 @@ nav a:hover { text-decoration: underline; }
 @media (min-width: 768px) {
     #menu-toggle {
         display: none;
-    } /* hide button on desktop */
+    }
+
+    #main-nav {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        pointer-events: auto;
+    }
+
     #main-nav ul {
-        display: flex; /* always show menu on desktop */
+        display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 20px;
