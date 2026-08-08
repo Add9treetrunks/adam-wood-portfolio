@@ -102,18 +102,27 @@ body.dark-mode #menu-toggle:hover {
     transform: translateY(-15px);
     max-height: 0;
     overflow: hidden;
-    transition:
-            opacity 0.4s ease,
-            transform 0.4s ease,
-            max-height 0.4s ease;
+    pointer-events: none;
 }
 
-/* Opening */
+/* Opening (slower, smoother) */
 #main-nav.active {
     opacity: 1;
     transform: translateY(0);
-    max-height: 500px;
+    max-height: 500px;   /* adjust to fit your menu */
+    overflow: hidden;
     pointer-events: auto;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
+}
+
+/* Closing (faster) */
+#main-nav.closing {
+    opacity: 0;
+    transform: translateY(-15px);
+    max-height: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease, max-height 0.4s ease;
 }
 
 

@@ -21,12 +21,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuBtn && nav) {
         menuBtn.addEventListener("click", () => {
-            nav.classList.toggle("active");
-            // Change button text depending on state
             if (nav.classList.contains("active")) {
-                menuBtn.textContent = "✖ Close";
-            } else {
+                // Closing: faster animation
+                nav.classList.remove("active");
+                nav.classList.add("closing");
                 menuBtn.textContent = "☰ Menu";
+
+                // Wait for transition to finish before cleaning up
+                nav.addEventListener("transitionend", function handler(event) {
+                    // Only clean up after the max-height transition ends
+                    if (event.propertyName === "max-height") {
+                        nav.classList.remove("closing");
+                        nav.removeEventListener("transitionend", handler);
+                    }
+                });
+            } else {
+                // Opening: slower animation
+                nav.classList.add("active");
+                menuBtn.textContent = "✖ Close";
             }
         });
 
@@ -45,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         target.scrollIntoView({
                             behavior: "smooth"
                         });
-                    }, 400);
+                    }, 0);
                 }
                 else{
                     target.scrollIntoView({behavior: "smooth"});
