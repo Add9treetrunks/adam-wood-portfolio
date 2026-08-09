@@ -30,6 +30,7 @@ body {
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 15px;
 }
 
 #dark-mode-toggle:hover,
@@ -312,4 +313,5 @@ footer {
     header { padding: 15px; }
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.4rem; }
+    #main-nav { margin-left: 15px; }
 }

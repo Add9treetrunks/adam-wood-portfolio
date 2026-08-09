@@ -82,6 +82,7 @@ The project focuses on learning how websites are:
 ## Future Improvements
 
 * Add additional projects
+* Add images
 * Add a major full-stack project
 * Improve animations and transitions
 * Add a blog section
