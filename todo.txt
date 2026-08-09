@@ -1,0 +1,6 @@
+## Day 13 — Deploy to GitHub Pages (30 min)
+
+1. Push to GitHub.
+2. Go to **Settings → Pages**.
+3. Select `main` branch.
+4. Save.
