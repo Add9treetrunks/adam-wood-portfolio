@@ -82,6 +82,7 @@ The project focuses on learning how websites are:
 ## Future Improvements
 
 * Add additional projects
+* Add a back to top button
 * Add images
 * Add a major full-stack project
 * Improve animations and transitions
@@ -89,7 +90,6 @@ The project focuses on learning how websites are:
 * Add a downloadable resume
 * Continue improving accessibility
 * Expand JavaScript functionality
-* Add a LinkedIn profile when available
 
 ## Live Website
 
