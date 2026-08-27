@@ -1,12 +1,12 @@
 # Adam Wood Portfolio
 
-A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my projects, technical skills, education, leadership experience, and achievements as a Computer Science & Economics student.
+A responsive personal portfolio website built with HTML, CSS, and JavaScript to showcase my projects, technical skills, education, leadership experience, achievements, and community involvement as a Computer Science & Economics student.
 
 ## Overview
 
-This portfolio website serves as a central place to showcase my programming projects, technical skills, education, leadership experience, and professional development.
+This portfolio website serves as a central place to showcase my programming projects, technical skills, education, leadership experience, achievements, volunteer work, and professional development.
 
-It was created as part of my web development learning phase to practice building responsive and interactive websites using core frontend technologies.
+It was created as part of my web development learning phase to practice building responsive and interactive websites using core frontend technologies while building a professional online presence.
 
 ## Features
 
@@ -19,6 +19,7 @@ It was created as part of my web development learning phase to practice building
 * Skills section highlighting technical abilities
 * Projects section showcasing completed software projects
 * Leadership and experience section
+* Volunteer & Community Service section
 * Achievements section
 * Contact section with email, GitHub, and location links
 
@@ -55,6 +56,23 @@ Technologies:
 
 [View the project on GitHub](https://github.com/Add9treetrunks/Inventory-Management-System)
 
+## Volunteer & Community Service
+
+A section dedicated to documenting volunteer work and community involvement completed throughout university.
+
+As part of the Barbados Government scholarship programme, I am completing 150 hours of approved volunteer service through the UWI Give Back Programme.
+
+Volunteer activities will be documented with:
+
+* Organization
+* Role
+* Dates
+* Hours completed
+* Description of responsibilities
+* Skills developed and/or community impact
+
+The section will be updated throughout the academic year as additional volunteer hours and experiences are completed.
+
 ## Project Structure
 
 ```text
@@ -90,6 +108,8 @@ The project focuses on learning how websites are:
 * Add a downloadable resume
 * Continue improving accessibility
 * Expand JavaScript functionality
+* Continue documenting volunteer and community service experiences
+* Add volunteer hour tracking/progress
 
 ## Live Website
 
